@@ -1,16 +1,60 @@
-# fluttrt_login_register
+# AniRadar
 
-A new Flutter project.
+AniRadar is a Flutter mobile app for browsing anime data from the free Jikan API.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Now airing anime
+- Upcoming anime
+- Weekly anime schedule
+- Anime search
+- Detail page with poster, score, episodes, status, genres, synopsis, and trailer URL
+- Custom Android launcher icon
 
-A few resources to get you started if this is your first Flutter project:
+## API
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This app uses Jikan API, a free REST API for MyAnimeList data.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Docs: https://docs.api.jikan.moe/
+- Base URL: `https://api.jikan.moe/v4`
+
+Used endpoints:
+
+- `/seasons/now`
+- `/seasons/upcoming`
+- `/schedules`
+- `/anime?q=keyword`
+
+## Project Structure
+
+```text
+lib/
+  app/ani_radar_app.dart
+  main.dart
+  models/anime.dart
+  screens/anime/anime_detail_page.dart
+  screens/anime/anime_list_page.dart
+  screens/anime/anime_search_page.dart
+  services/jikan_service.dart
+  widgets/anime_card.dart
+  widgets/anime_poster.dart
+```
+
+## Common Commands
+
+```powershell
+flutter pub get
+flutter analyze
+flutter test
+flutter run
+flutter build apk
+```
+
+## Android Install
+
+```powershell
+flutter devices
+flutter install -d DEVICE_ID
+```
+
+If Android shows the old icon, uninstall the app from the phone and install again.
